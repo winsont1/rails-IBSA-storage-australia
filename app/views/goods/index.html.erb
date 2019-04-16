@@ -1,0 +1,35 @@
+<div class="container-fluid">
+  <h1>Index of Goods at Storage Australia</h1>
+
+  <table class="table table-bordered table-hover">
+  <thead class="thead-light">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Consignment ID</th>
+      <th scope="col">Name</th>
+      <th scope="col">Type</th>
+      <th scope="col">Source</th>
+      <th scope="col">Destination</th>
+      <th scope="col">Entry Time</th>
+      <th scope="col">Exit Time</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% i = 0 %>
+    <% @goods.each do |good| %>
+    <% i += 1 %>
+    <tr>
+      <th scope="row"><%= i %></th>
+      <td><%= good.consignment.given_consignment_ID %></td>
+      <td><%= good.name %></td>
+      <td><%= good.good_type %></td>
+      <td><%= good.consignment.source %></td>
+      <td><%= good.consignment.destination %></td>
+      <td><%= good.consignment.entry_time %></td>
+      <td><%= good.consignment.exit_time %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+
+</div>
