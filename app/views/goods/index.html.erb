@@ -1,6 +1,6 @@
 <div class="container-fluid">
   <h1>Storage Australia</h1>
-  <h3>Goods currently available</h3>
+  <h3>Goods currently available in warehouse</h3>
   <%= link_to "Upload new consignment form", new_consignment_path %>
 
   <table class="table table-bordered table-hover">
@@ -13,7 +13,6 @@
       <th scope="col">Source</th>
       <th scope="col">Destination</th>
       <th scope="col">Entry Time</th>
-      <th scope="col">Exit Time</th>
   </tr>
   </thead>
   <tbody>
@@ -29,7 +28,6 @@
       <td><%= good.consignment.source %></td>
       <td><%= good.consignment.destination %></td>
       <td><%= good.consignment.entry_time %></td>
-      <td><%= good.consignment.exit_time %></td>
     </tr>
     <% end %>
   </tbody>
