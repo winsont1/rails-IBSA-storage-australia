@@ -1,0 +1,2 @@
+class ConsignmentsController < ApplicationController
+end
