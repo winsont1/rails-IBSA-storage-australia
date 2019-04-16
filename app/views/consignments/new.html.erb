@@ -1,6 +1,6 @@
 <div class="container">
-  <h1>New Consignment Form</h1>
-  <h4>*Please upload consignment csv here with headers in the following order:</h4>
+  <h1>New / Update Consignments </h1>
+  <h4>*Please upload your bulk consignment csv here with headers in the following order:</h4>
   <div class='btn btn-success'><h5>#,Consignment ID, Name, Type, Source, Destination, Entry At, Exit At</h5></div>
   <%= form_tag import_consignments_path, multipart: true do %>
   <%= file_field_tag :file %>

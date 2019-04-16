@@ -1,7 +1,7 @@
 # Storage Australia
 
 ## Overview
-This app allows you to manage records of goods in a storage facility.
+This app allows you to record and update records of goods in a storage facility.
 
 
 ## Installation Instructions
@@ -21,4 +21,8 @@ From root folder, please key in the following command. This will create the data
 
 ## To do
 * Build out tests
-*
+* Improve Front end
+* Improve the notices (notify users if failed)
+* Improve the csv upload to deal with non-valid data inputs / formats
+* Include devise and appropriate authorizations
+* Instead of deleting records, fix 'status' bug
