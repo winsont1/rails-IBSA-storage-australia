@@ -1,5 +1,8 @@
 require 'faker'
 
+puts 'Destroying seeds...'
+Consignment.destroy_all
+
 puts 'Creating 50 fake goods...'
 
 # good_type =  ['Food', 'Textile', 'Metal', 'Wood', 'Paper', 'Liquid']

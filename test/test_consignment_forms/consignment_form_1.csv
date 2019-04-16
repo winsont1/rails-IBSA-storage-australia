@@ -1,4 +1,4 @@
-#,consignment_id,name,good_type,source,destination,entry_time,exit_time
-1,A1150,Wood,Construction,Perth,Columbia,2018-07-10 20:26:20 UTC,2018-10-10 20:26:20 UTC
-2,A1149,Water,Construction,Darwin,North America,2018-08-10 20:26:20 UTC,
-3,A1190,Steel,Construction,Melbourne,New Zealand,2018-09-10 20:26:20 UTC,
+#,Consignment ID,Name,Type,Source,Destination,Entry At,Exit At
+1,AS1150AP,Wood,Construction,Perth,Columbia,10/07/18 20:26,
+2,AS1149AP,Water,Construction,Darwin,North America,10/08/18 20:26,
+3,AS1190AP,Steel,Construction,Melbourne,New Zealand,10/09/18 20:26,

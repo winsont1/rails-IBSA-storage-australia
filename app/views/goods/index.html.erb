@@ -1,6 +1,7 @@
 <div class="container-fluid">
   <h1>Storage Australia</h1>
   <h3>Goods currently available</h3>
+  <%= link_to "Upload new consignment form", new_consignment_path %>
 
   <table class="table table-bordered table-hover">
   <thead class="thead-light">
@@ -17,6 +18,7 @@
   </thead>
   <tbody>
     <% i = 0 %>
+    <% @goods = Good.select{|d| d.consignment.status == 'Available' } %>  <!-- # Check that good has not exited yet -->
     <% @goods.each do |good| %>
     <% i += 1 %>
     <tr>
