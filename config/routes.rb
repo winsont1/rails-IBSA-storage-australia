@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :goods, except: :index
+  resources :goods
 
   resources :consignments do
     collection {post :import}

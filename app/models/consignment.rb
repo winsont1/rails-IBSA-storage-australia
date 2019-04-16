@@ -8,7 +8,7 @@ class Consignment < ApplicationRecord
       if (consignment_out = Consignment.find_by(given_consignment_ID: row[1])) && (row[7].nil? == false) # TODO: Raise error if consignment already in and exit time is nil
         consignment_out.destroy
         # consignment_out.exit_time = Faker::Time.between(DateTime.now - 181, DateTime.now) # TODO: Having issue with updating time
-      else
+      elsif
         consignment = Consignment.new(
           source: row[4], # TODO: Change to hash
           destination: row[5],

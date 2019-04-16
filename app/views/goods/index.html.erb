@@ -1,7 +1,17 @@
+<%= flash[:notice] %>
 <div class="container-fluid">
   <h1>Storage Australia</h1>
   <h3>Goods currently available in warehouse</h3>
-  <%= link_to "Upload new consignment form", new_consignment_path %>
+  <button type="button" class="btn btn-success"><%= link_to "Upload new consignment form", new_consignment_path %></button>
+
+
+  <%= form_tag goods_path, method: :get do %>
+    <%= text_field_tag :query,
+    params[:query],
+    class: "form-control",
+    placeholder: "Search by goods type"%>
+  <% end %>
+  <%= link_to "Reset search", root_path %>
 
   <table class="table table-bordered table-hover">
   <thead class="thead-light">
@@ -17,7 +27,7 @@
   </thead>
   <tbody>
     <% i = 0 %>
-    <% @goods = Good.select{|d| d.consignment.status == 'Available' } %>  <!-- # Check that good has not exited yet -->
+    <% @goods = @goods.select{|d| d.consignment.status == 'Available' } %>  <!-- # Check that good has not exited yet -->
     <% @goods.each do |good| %>
     <% i += 1 %>
     <tr>

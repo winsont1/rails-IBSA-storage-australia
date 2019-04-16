@@ -1,7 +1,7 @@
 <div class="container">
   <h1>New Consignment Form</h1>
   <h4>*Please upload consignment csv here with headers in the following order:</h4>
-  <h5>#,Consignment ID, Name, Type, Source, Destination, Entry At, Exit At</h5>
+  <div class='btn btn-success'><h5>#,Consignment ID, Name, Type, Source, Destination, Entry At, Exit At</h5></div>
   <%= form_tag import_consignments_path, multipart: true do %>
   <%= file_field_tag :file %>
   <%= submit_tag "Import CSV" %>
@@ -9,4 +9,5 @@
   <br><br><br><br>
 
   <h6>*Please ensure to upload the csv with the headers in order</h6>
+  <%= link_to "Back to Goods Index", root_path %>
 </div>
