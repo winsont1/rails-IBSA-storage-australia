@@ -10,9 +10,29 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 2019_04_16_060243) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "consignments", force: :cascade do |t|
+    t.string "source"
+    t.string "destination"
+    t.datetime "entry_time"
+    t.datetime "exit_time"
+    t.string "given_consignment_ID"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "goods", force: :cascade do |t|
+    t.string "good_type"
+    t.string "name"
+    t.bigint "consignment_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["consignment_id"], name: "index_goods_on_consignment_id"
+  end
+
+  add_foreign_key "goods", "consignments"
 end
