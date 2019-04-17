@@ -5,8 +5,8 @@ Consignment.destroy_all
 
 puts 'Creating 50 fake goods...'
 
-# good_type =  ['Food', 'Textile', 'Metal', 'Wood', 'Paper', 'Liquid']
-# good_name =  ['Coconuts', 'Rolls of Cotton', 'Wooden Boards 20”x20”', 'Roll of Paper', 'Edible Oil (10L)']
+good_type =  ['Food', 'Textile', 'Metal', 'Wood', 'Paper', 'Liquid']
+good_name =  ['Coconuts', 'Rolls of Cotton', 'Wooden Boards 20”x20”', 'Roll of Paper', 'Edible Oil (10L)','Bales of Hay','Cuban Cigars']
 
 
 50.times do
@@ -20,8 +20,8 @@ puts 'Creating 50 fake goods...'
   consignment.save!
 
   good = Good.new(
-    name: Faker::Construction.material,
-    good_type: Faker::Construction.subcontract_category,
+    name: good_name[rand(0..6)],
+    good_type: good_type[rand(0..5)],
     consignment: consignment
   )
   good.save!
